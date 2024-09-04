@@ -1,0 +1,119 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+h2 {
+    text-align: center !important;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Ensure details section contents are left-aligned and not bold */
+.details-section table th,
+.details-section table td {
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Ensure labor details are displayed in rows as required */
+.labor-details-section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Ensure commission details are not bold */
+.commission-details-section table th,
+.commission-details-section table td {
+    font-weight: normal;
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        zoom: 99%;
+        font-size: 12px;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: 21cm;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 0;
+    }
+
+    .logo-container img {
+        width: 200px; /* Adjust the logo size for printing */
+        height: auto;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    /* Ensure details section contents are left-aligned and not bold */
+    .details-section table th,
+    .details-section table td {
+        font-weight: normal;
+        text-align: left;
+    }
+
+    /* Ensure labor details are displayed in rows as required */
+    .labor-details-section .row {
+        margin-bottom: 5px;
+    }
+
+    /* Ensure commission details are not bold */
+    .commission-details-section table th,
+    .commission-details-section table td {
+        font-weight: normal;
+    }
+}
+hide {
+    display: none;
+}

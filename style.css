@@ -1,0 +1,282 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 10%;
+    height: auto;
+}
+
+.calculator {
+    padding: 10px;
+    border: 2px solid #121111;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.checkbox-container label {
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ea8a6d;
+    color: #121111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #c67358;
+}
+
+.technicians-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.output-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.output-group-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.output-group label,
+.output-group span {
+    display: block;
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+#finalPrice {
+    font-weight: bold;
+}
+
+.notes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.notes-section textarea {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pay-rates-section,
+.office-use-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Pay Rates Section Styles */
+.pay-rates-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pay-rates-section .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.pay-rates-section .column label,
+.pay-rates-section .column input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* For Office Use Only Section Styles */
+.office-use-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+.office-use-section .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.office-use-section .column label,
+.office-use-section .column input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Styles for screens smaller than 768px (typical mobile width) */
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%; /* Set to 100% for full width on mobile */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .column {
+        flex: 1 1 100%; /* Allow columns to wrap on mobile */
+        padding: 0;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;  /* Set input width to 100% on mobile */
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+.file-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.file-item {
+    text-align: center;
+    max-width: 150px;
+}
+
+.file-item img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.file-item img:hover {
+    transform: scale(1.05);
+}
+
+.file-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
